@@ -3,8 +3,8 @@
 # Exit script as soon as a command fails.
 set -o errexit
 
-npm run compile-contracts
+yarn run compile-contracts
 
-npx mocha --exit --recursive test -t 10000
+yarn mocha --exit --recursive test -t 10000
 
 exit 0

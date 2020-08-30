@@ -54,7 +54,10 @@ module.exports = {
               "ampls", "staker", "ownable",
 
               // names
-              "nithin", "naguib"
+              "nithin", "naguib",
+
+              // truffle.js stuff
+              "mainnet", "keystore", "Ethereumjs", "hdwallet", "keyfile", "priv"
             ],
             "skipIfMatch": [
               "http(s)?://[^s]*",

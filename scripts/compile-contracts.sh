@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 PROJECT_DIR=$DIR/../
-SOLVERSION=0.5.0
+SOLVERSION=0.5.17
 
 export OPENZEPPELIN_NON_INTERACTIVE=true
 
@@ -13,10 +13,10 @@ rm -rf $PROJECT_DIR/build
 mkdir -p $PROJECT_DIR/build/contracts
 
 echo "-----Compiling project"
-npx oz compile --solc-version $SOLVERSION
+yarn run oz compile --solc-version $SOLVERSION
 
 echo "-----Compiling UFragments contract"
 cd $PROJECT_DIR/node_modules/uFragments
-npx oz compile --solc-version 0.4.24
+yarn run oz compile --solc-version $SOLVERSION
 cd $PROJECT_DIR
 cp $PROJECT_DIR/node_modules/uFragments/build/contracts/UFragments.json $PROJECT_DIR/build/contracts/
