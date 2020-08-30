@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-npx setup-local-chains "lite"
+yarn setup-local-chains "lite"

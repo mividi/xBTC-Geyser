@@ -21,7 +21,7 @@
     "precommit": "./scripts/pre-commit.sh",
     "compile-contracts": "./scripts/compile-contracts.sh",
     "coverage": "./scripts/coverage.sh",
-    "lint": "npx eslint ./scripts ./test ./util *.js --cache --fix && npx solhint ./contracts/*.sol",
+    "lint": "yarn eslint ./scripts ./test ./util *.js --cache --fix && yarn solhint ./contracts/*.sol",
     "test": "./scripts/test.sh"
   },
   "pre-commit": {
