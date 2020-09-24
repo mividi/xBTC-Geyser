@@ -27,9 +27,8 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
 RUN apt-get install -y sudo lsof make
 RUN pip3 install arrow
 
-CMD yarn run oz compile && yarn lint && yarn run oz check
-
 WORKDIR /code/
-ADD yarn.lock package.json /code/
-RUN yarn
 ADD . /code/
+RUN yarn
+
+CMD yarn compile && yarn lint && yarn run oz check && yarn coverage

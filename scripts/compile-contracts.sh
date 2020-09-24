@@ -17,6 +17,6 @@ yarn run oz compile --solc-version $SOLVERSION
 
 echo "-----Compiling UFragments contract"
 cd $PROJECT_DIR/node_modules/uFragments
-yarn run oz compile --solc-version $SOLVERSION
+npx truffle compile --solc-version $SOLVERSION
 cd $PROJECT_DIR
 cp $PROJECT_DIR/node_modules/uFragments/build/contracts/UFragments.json $PROJECT_DIR/build/contracts/

@@ -19,8 +19,8 @@
   "author": "dev-support@ampleforth.org",
   "scripts": {
     "precommit": "./scripts/pre-commit.sh",
-    "compile-contracts": "./scripts/compile-contracts.sh",
-    "coverage": "./scripts/coverage.sh",
+    "compile": "./scripts/compile-contracts.sh",
+    "coverage": "node scripts/coverage.js",
     "lint": "yarn eslint ./scripts ./test ./util *.js --cache --fix && yarn solhint ./contracts/*.sol",
     "test": "./scripts/test.sh"
   },
@@ -37,10 +37,11 @@
     "uFragments": "https://github.com/ampleforth/uFragments.git#v1.0.0"
   },
   "devDependencies": {
-    "@openzeppelin/cli": "^2.6.0",
-    "@openzeppelin/gsn-provider": "^0.1.9",
-    "@openzeppelin/test-environment": "^0.1.2",
-    "@openzeppelin/test-helpers": "^0.5.4",
+    "@openzeppelin/cli": "^2.8.2",
+    "@openzeppelin/gsn-helpers": "^0.2.3",
+    "@openzeppelin/gsn-provider": "^0.1.10",
+    "@openzeppelin/test-environment": "^0.1.5",
+    "@openzeppelin/test-helpers": "^0.5.6",
     "ajv": "^5.0.0",
     "bn-chai": "^1.0.1",
     "chai": "^4.2.0",
@@ -58,13 +59,14 @@
     "eslint-plugin-spellcheck": "0.0.10",
     "eslint-plugin-standard": "^1.3.3",
     "eth-gas-reporter": "^0.2.14",
-    "ganache-core-coverage": "https://github.com/OpenZeppelin/ganache-core-coverage/releases/download/2.5.3-coverage/ganache-core-coverage-2.5.3.tgz",
-    "mocha": "^7.0.0",
+    "ethereumjs-util": "^7.0.1",
+    "ganache-cli": "^6.9.1",
+    "mocha": "^8.0.1",
     "openzeppelin-eth": "2.0.2",
     "pre-commit": "^1.2.2",
     "prettier": "^1.12.1",
-    "solhint": "^2.0.0",
-    "solidity-coverage": "github:rotcivegaf/solidity-coverage#5875f5b7bc74d447f3312c9c0e9fc7814b482477",
+    "solhint": "^3.2.0",
+    "solidity-coverage": "^0.7.8",
     "zos-lib": "^2.0.0"
   }
 }
