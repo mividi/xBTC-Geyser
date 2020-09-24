@@ -67,7 +67,6 @@
     "prettier": "^1.12.1",
     "solhint": "^3.2.0",
     "solidity-coverage": "^0.7.8",
-    "zos-lib": "^2.0.0",
-    "scrypt": "^6.0.3"
+    "zos-lib": "^2.0.0"
   }
 }
